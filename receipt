@@ -1,0 +1,88 @@
+public class receipt{
+
+    private String ticketcode;
+    private int numofticket;
+    private int price;
+    private int date;
+    private int time;
+    private String depart;
+    private String arrival;
+    private int payment;
+    private String paymentType;
+    
+    public receipt(String ticketcode,int numofticket,int price,int date,int time,String depart,String arrival,int payment,String paymentType){
+    
+        this.ticketcode=ticketcode;
+        this.numofticket=numofticket;
+        this.price=price;
+        this.date=date;
+        this.time=time;
+        this.depart=depart;
+        this.arrival=arrival;
+        this.payment=payment;
+        this.paymentType=paymentType;
+    }
+    
+    public int calcprice(){
+    
+       int totalprice=price*numofticket;
+        return totalprice;
+    }
+    public double calctax(){
+    
+        double taxprice=price*0.06;
+        return taxprice;
+    }
+    public double calcpricewithtax(){
+    
+        double pricewithtax=calcprice()+calctax();
+        return pricewithtax;
+    }
+    public double calcdiscount(){
+    
+        double discount=0.0;
+        if(paymentType.equals("c")){
+        
+            discount=calcpricewithtax()*0.5;
+        }else if(paymentType.equals("m")){
+        
+            discount=calcpricewithtax()*0;
+        }
+        return discount;
+    }
+    public double calcpriceafterdis(){
+    
+        double priceafterdis=calcpricewithtax()-calcdiscount();
+        return priceafterdis;
+        
+    }
+    public double calcbal(){
+    
+        double balance=payment-calcpriceafterdis();
+        return balance;
+    }
+    public void display(){
+    
+        System.out.print("Ticket details:");
+        System.out.print("Code:" + ticketcode);
+        System.out.print("Number of ticket:" + numofticket);
+        System.out.print("Price:RM" + price);
+        System.out.print("Date:" + date);
+        System.out.print("Time:" + time);
+        System.out.print("Depart:" + depart);
+        System.out.print("Arrival:" + arrival);
+        System.out.print("******************************");
+        System.out.print("Price:" + calcprice());
+        System.out.print("Tax:" + calctax());
+        System.out.print("Price with tax:RM" + calcpricewithtax());
+        System.out.print("Discount received:RM" + calcdiscount());
+        System.out.print("Price after discount:RM" +  calcpriceafterdis());
+        System.out.print("Payment:RM" + payment);
+        System.out.print("Balance:RM" + calcbal());
+        System.out.print("******************************");
+        System.out.print("THANK YOU PLEASE COME AGAIN");
+        
+    }
+    
+    
+}

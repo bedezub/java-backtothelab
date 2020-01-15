@@ -1,0 +1,10 @@
+    Total Score for each student    
+
+Ahmad 32
+
+Sulaiman 37
+
+Dhani 19
+
+Intan 16
+

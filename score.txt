@@ -1,0 +1,4 @@
+Ahmad 10 22
+Sulaiman 4 33
+Dhani 12 7
+Intan 8 8 

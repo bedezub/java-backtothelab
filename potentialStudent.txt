@@ -1,0 +1,10 @@
+Name: Park Jimin
+Group: CS1103G
+Score 1: 90.0
+Score 2: 99.5
+Score 3: 89.75
+Name: Jisoo
+Group: CS1103F
+Score 1: 90.4
+Score 2: 96.0
+Score 3: 84.0

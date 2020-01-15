@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=NewCar
+comment1.params=
+comment1.target=NewCar()
+comment2.params=ic\ n\ r\ i\ p\ w
+comment2.target=NewCar(java.lang.String,\ java.lang.String,\ java.lang.String,\ double,\ double,\ boolean)
+comment3.params=
+comment3.target=double\ getImportDuty()
+comment4.params=
+comment4.target=boolean\ getWareHouse()
+comment5.params=
+comment5.target=double\ getPriceB4ImportDuty()
+comment6.params=i\ p\ w
+comment6.target=void\ setData(double,\ double,\ boolean)
+comment7.params=
+comment7.target=double\ carPrice()
+numComments=8
